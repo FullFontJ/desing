@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto CSS para Fotos</title>
+</head>
+<style>
+    picture{
+        display: inline-block;
+        background-color: #ffff00;
+    }
+    picture img{
+        max-width: 300px;
+        mix-blend-mode: multiply;
+        filter: grayscale(100%);
+    }
+</style>
+
+<body>
+    <picture>
+        <img src="pesca.jpg" >
+    </picture>
+</body>
+</html>
