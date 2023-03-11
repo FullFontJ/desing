@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    width: auto;
+    min-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider{
+    animation: design 25s ease-out 0s backwards infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.slide span{
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: absolute;
+    left: 14vh;
+    top: 40vh;
+    font-size: 20vh;
+    line-height: 20vh;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-left: 0 auto;
+}
+
+.one{
+    background-image: url(img/one.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.two{
+    background-image: url(img/two.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.three{
+    background-image: url(img/three.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.four{
+    background-image: url(img/four.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes design{
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: 0%;
+    }
+    30%{
+        left: -100%;
+    }
+    40%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    65%{
+        left: -200%;
+    }
+    85%{
+        left: -300%;
+    }
+    90%{
+        left: -300%;
+    }
+    100%{
+        left: 0%;
+    }
+}
