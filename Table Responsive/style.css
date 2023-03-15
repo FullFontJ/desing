@@ -1,0 +1,69 @@
+table{
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+}
+
+table tr{
+    padding: .46em;
+}
+
+thead tr{
+    background-color: #553e37;
+}
+
+thead th{
+    color: white;
+    font-size: 15px;
+}
+
+tbody tr:nth-child(even){
+    background-color: aqua;
+}
+
+table th, table td{
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+
+thead th{
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 440px){
+
+    table{
+        border: 3px solid #553e37
+    }
+
+    table thead tr{
+        display: none;
+    }
+    
+    table tr{
+        display: block;
+    }
+
+    table th, table td{
+        padding: 8px;
+    }
+
+    table td{
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+
+    table td::before{
+        content: attr(data-title) ": ";
+        float: left;
+    }
+
+    tbody tr:nth-child(even){
+        background-color: #553e37;
+        color: white;
+    }
+}
