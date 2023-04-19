@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Table</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Año</th>
-          <th>Titulo</th>
-          <th>Author</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-            <td data-title="Año">2011</td>
-            <td data-title="Titulo">The clean coder</td>
-            <td data-title="Author"> Robert C. Martin</td>
-        </tr>
-        <tr>
-            <td data-title="Año">2022</td>
-            <td data-title="Titulo">Big data, machine learning</td>
-            <td data-title="Author">Jose Manuel</td>
-        </tr>
-        <tr>
-            <td data-title="Año">2020</td>
-            <td data-title="Titulo">Aproximación a la ingeniería del software</td>
-            <td data-title="Author">Sebastian ruben</td>
-        </tr>
-      </tbody>
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id estudiante</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Id estudiante" >1</td>
+                <td data-label="Nombre" >Nombre A</td>
+                <td data-label="Apellido" >Apellido A</td>
+                <td data-label="Edad" >Edad 1</td>
+            </tr>
+            <tr>
+                <td data-label="Id estudiante" >2</td>
+                <td data-label="Nombre" >Nombre B</td>
+                <td data-label="Apellido" >Apellido B</td>
+                <td data-label="Edad" >Edad 2</td>
+            </tr>
+            <tr>
+                <td data-label="Id estudiante" >3</td>
+                <td data-label="Nombre" >Nombre C</td>
+                <td data-label="Apellido" >Apellido C</td>
+                <td data-label="Edad" >Edad 3</td>
+            </tr>
+        </tbody>
+        
     </table>
-  </body>
+</body>
 </html>
