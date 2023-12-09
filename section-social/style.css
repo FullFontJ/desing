@@ -1,0 +1,182 @@
+:root{
+    --background-stark: #f7f2f7;
+    --background-commentario: #502050;
+    --color-font: #f7f2f7;
+    --color-font-stark: #937b92;
+    --color-font-title: #502050;
+    --color-font-descripcion: #937b92;
+    --style-font: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: white;
+    font-family: var(--style-font);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "descripcion calificion calificion" "coment coment coment";
+    margin: auto;
+    padding: 40px 60px;
+    gap: 20px;
+}
+
+.info{
+    grid-area: descripcion;
+}
+
+.title{
+    font-size: 2.7em;
+    color: var(--color-font-title);
+    font-weight: 700;
+}
+
+.descripcion{
+    font-size: 1em;
+    color: var(--color-font-descripcion);
+    font-weight: 300;
+}
+
+.group-califi{
+    display: grid;
+    grid-template-columns: 450px;
+    grid-area: calificion;
+    justify-content: center;
+    align-self: center;
+}
+
+.item-califi{
+    max-width: 340px;
+    height: 40px;
+    background-color: var(--background-stark);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+.califi1{
+    justify-self: flex-start;
+}
+
+.califi2{
+    justify-self: center;
+}
+
+.califi3{
+    justify-self: flex-end;
+}
+
+.group-stark{
+    flex-flow: row nowrap;
+}
+
+.stark-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.descrip-calif{
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+.group-comentarios{
+    grid-area: coment;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+    gap: 20px;
+}
+
+.item-coment{
+    background-color: var(--background-commentario);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    color: var(--color-font);
+}
+
+.comentario1{
+    align-self: start;
+}
+
+.comentario2{
+    align-self: center;
+}
+
+.comentario3{
+    align-self: end;
+}
+
+.data-user{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username{
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.name-user{
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: 500;
+}
+
+.verificacion{
+    font-size: 0.9em;
+    margin: 0;
+    font-weight: 100;
+    color: var(--color-font-descripcion);
+}
+
+.comentario{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+@media (max-width: 500px) {
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas: "descripcion" "calificion" "coment";
+    }
+
+    .group-califi{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .califi1, .califi2, .califi3{
+        width: 90%;
+        height: 60px;
+        flex-flow: column;
+        justify-self: center;
+    }
+    .descrip-calif, .group-stark{
+        margin: 0;
+    }
+
+    .group-comentarios{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .item-coment{
+        width: 90%;
+    }
+  }
